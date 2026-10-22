@@ -1,0 +1,8 @@
+{
+	"mcpServers": {
+		"my-mcp-server-1a773506": {
+			"url": "https://mcp.tide.org/mcp",
+			"type": "http"
+		}
+	}
+}

@@ -1,0 +1,120 @@
+@import "tailwindcss";
+
+:root {
+  color-scheme: light;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f5f8f8;
+  color: #142c33;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  min-height: 100%;
+  margin: 0;
+}
+
+body {
+  background:
+    radial-gradient(ellipse at 12% 0%, rgb(204 242 233 / 42%), transparent 34rem),
+    #f5f8f8;
+  color: #142c33;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+button,
+a,
+input,
+textarea {
+  -webkit-tap-highlight-color: transparent;
+}
+
+::selection {
+  background: #b9e9dc;
+  color: #123b37;
+}
+
+.app-main {
+  width: min(100% - 2rem, 64rem);
+  min-height: calc(100vh - 9rem);
+  margin-inline: auto;
+  padding-block: clamp(2rem, 6vw, 4.5rem);
+}
+
+.surface-card {
+  overflow: hidden;
+  border: 1px solid #e0e9e8;
+  border-radius: 1.25rem;
+  background: rgb(255 255 255 / 94%);
+  box-shadow: 0 24px 70px -44px rgb(15 56 55 / 34%), 0 2px 8px rgb(15 56 55 / 4%);
+}
+
+.section-eyebrow {
+  color: #117565;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.form-control {
+  display: block;
+  width: 100%;
+  border: 1px solid #d5e0df;
+  border-radius: 0.7rem;
+  background: #fff;
+  color: #142c33;
+  box-shadow: 0 1px 2px rgb(20 44 51 / 4%);
+  outline: none;
+  transition: border-color 150ms ease, box-shadow 150ms ease;
+}
+
+.form-control:focus {
+  border-color: #168475;
+  box-shadow: 0 0 0 4px rgb(22 132 117 / 12%);
+}
+
+.primary-button {
+  display: inline-flex;
+  min-height: 2.9rem;
+  align-items: center;
+  justify-content: center;
+  gap: 0.55rem;
+  border: 1px solid #0b6d61;
+  border-radius: 0.7rem;
+  background: linear-gradient(135deg, #128171, #08695e);
+  padding: 0.7rem 1.15rem;
+  color: #fff;
+  font-weight: 700;
+  box-shadow: 0 5px 12px rgb(8 105 94 / 16%);
+  transition: transform 150ms ease, box-shadow 150ms ease, background 150ms ease;
+}
+
+.primary-button:hover:not(:disabled) {
+  transform: translateY(-1px);
+  background: linear-gradient(135deg, #0d7568, #055b52);
+  box-shadow: 0 8px 18px rgb(8 105 94 / 22%);
+}
+
+.primary-button:disabled {
+  cursor: not-allowed;
+  opacity: 0.55;
+  box-shadow: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}
